@@ -30,7 +30,7 @@ li {
   margin: 0 auto;
 }
 .site-title {
-  width: 250px;
+  width: 260px;
   line-height: 1px;
   margin-bottom: 30px;
 }
@@ -72,11 +72,11 @@ li {
 https://code-step.com/demo/html/blog/
 */
 #header {
-  width: 260px;
+  width: 240px;
   height: 100%;
   background-color: #fff;
   /*       上　　右　　下　　左*/
-  padding: 40px 50px 30px 20px;
+  padding: 30px 10px 30px 10px;
   position: fixed;
   top: 0;
   /* 画面の高さが低くてメニューが隠れてしまった場合に、縦スクロールが出るよう設定 */
@@ -84,12 +84,13 @@ https://code-step.com/demo/html/blog/
 }
 
 #navi {
-  padding-left: 30px; 
+  padding: 0px 60px 0px 30px; 
 }
 
 #header .nav-menu {
   margin-bottom: 60px;
 }
+
 #header li {
   font-size: 0.875rem;
   padding: 8px 0;
