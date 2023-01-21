@@ -1,1 +1,0 @@
-print("Hollow Mac!");
