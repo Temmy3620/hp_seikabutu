@@ -15,6 +15,11 @@ img {
   max-width: 100%;
   vertical-align: bottom;
 }
+/*SNS画像大きさ*/
+img.icon {
+  width: 20%;
+  height: 20%;
+}
 li {
   list-style: none;
 }
@@ -84,7 +89,7 @@ https://code-step.com/demo/html/blog/
 }
 
 #navi {
-  padding: 0px 100px 0px 30px; 
+  padding: 0px 60px 0px 30px; 
 }
 
 #header .nav-menu {
@@ -94,21 +99,22 @@ https://code-step.com/demo/html/blog/
 #header li {
   font-size: 0.875rem;
   padding: 8px 0;
+  
 }
+
+/*マウスオーバー下線が上から出現*/
 #b {
   position: relative;
   display: block;
   text-decoration: none;
 }
-
 #b::after {
   position: absolute;
   bottom: 10px;
   left: 0;
   content: '';
   width: 100%;
-  height: 5px;
-  background: gray;
+  height: 3px;
   transition: .3s;
   opacity: 0;
   visibility: hidden;
@@ -117,41 +123,36 @@ https://code-step.com/demo/html/blog/
   visibility: visible;
   bottom: 8px;
   opacity: 1;
+  background-color: gainsboro;
 }
-
-
-
-
-
-Resources
-
-
-
-
-
-
-
-Resources
-
-/*-------------------------------------------
-Video
--------------------------------------------*/
-/*
-動画を全画面表示
-*/
-#video {
+/*マウスオーバー左から右*/
+#c {
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+#c::after {
+  position: absolute;
+  left: 0;
+  content: '';
   width: 100%;
-  height: 100vh;
+  height: 1px;
+  background: #000000;
+  bottom: 8px;               /*アンダーラインがaタグの下端から現れる*/
+  transform: scale(0, 1);     /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+  transform-origin: left top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+  transition: transform 0.5s; /*変形の時間*/
 }
-/*
-「position: fixed;」で動画を固定し、「top: -220px;」で表示位置を調整
-z-indexでマイナスを設定して、他のコンテンツの下に隠れるようにする
-*/
-#video .bg-video {
-  position: fixed;
-  top: -220px;
-  z-index: -10;
+#c:hover::after {
+  transform: scale(1, 1);     /*ホバー後、x軸方向に1（相対値）伸長*/
+  bottom: 8px;
 }
+
+#sns {
+  display: flex;
+  
+}
+
 
 /*-------------------------------------------
 Project
